@@ -1,0 +1,12 @@
+.idea/
+.mvn/
+build.gradle
+gradle/
+gradlew
+gradlew.bat
+manifest.yml
+mvnw
+mvnw.cmd
+rest-service.iml
+settings.gradle
+target/
