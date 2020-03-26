@@ -20,9 +20,15 @@ public class GreetingController {
 	@GetMapping("/greeting")
 	@Operation(extensions = {
 			@Extension(properties = {
-					@ExtensionProperty(name = "examples", value = "[" +
-							"{\"name\":\"Alexa\"}," +
-							"{\"name\":\"Siri\"}" +
+					@ExtensionProperty(name = "examples", value =
+							"[" +
+								"{" +
+									"\"name\":\"Alexa\"," +
+									"\"description\":\"This is a description\"," +
+									"\"parameters\": {\"id\":\"X123\"}}," +
+								"{" +
+									"\"name\":\"Siri\"" +
+								"}" +
 							"]", parseValue = true),
 			})
 	})
