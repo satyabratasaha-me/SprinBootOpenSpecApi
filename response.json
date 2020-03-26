@@ -1,1 +1,131 @@
-{"openapi":"3.0.1","info":{"title":"OpenAPI definition","version":"v0"},"servers":[{"url":"http://localhost:8080","description":"Generated server url"}],"paths":{"/api/greeting":{"get":{"tags":["greeting-controller"],"operationId":"greeting","parameters":[{"name":"name","in":"query","required":false,"schema":{"type":"string","default":"World"}}],"responses":{"200":{"description":"default response","content":{"*/*":{"schema":{"$ref":"#/components/schemas/Greeting"}}}}},"x-examples":[{"name":"Alexa","description":"This is a description","parameters":{"id":"X123"}},{"name":"Siri"}]}},"/api/persons/add":{"get":{"tags":["persons-controller"],"operationId":"greeting_1","parameters":[{"name":"person","in":"query","required":true,"schema":{"$ref":"#/components/schemas/Persons"}}],"responses":{"200":{"description":"default response","content":{"*/*":{"schema":{"type":"string"}}}}},"x-examples":{"x":{"id":"456"},"y":{"id":"123"}}}}},"components":{"schemas":{"Greeting":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"content":{"type":"string"}}},"Persons":{"type":"object","properties":{"name":{"type":"string"},"address":{"type":"string"},"age":{"type":"integer","format":"int64"}}}}}}
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "OpenAPI definition",
+		"version": "v0"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:8080",
+			"description": "Generated server url"
+		}
+	],
+	"paths": {
+		"/api/greeting": {
+			"get": {
+				"tags": [
+					"greeting-controller"
+				],
+				"operationId": "greeting",
+				"parameters": [
+					{
+						"name": "name",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"default": "World"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "default response",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Greeting"
+								}
+							}
+						}
+					}
+				},
+				"x-examples": [
+					{
+						"name": "Alexa",
+						"description": "This is a description",
+						"parameters": {
+							"id": "X123"
+						}
+					},
+					{
+						"name": "Siri",
+						"description": "This is a description",
+						"parameters": {
+							"id": "X456"
+						}
+					}
+				]
+			}
+		},
+		"/api/persons/add": {
+			"get": {
+				"tags": [
+					"persons-controller"
+				],
+				"operationId": "greeting_1",
+				"parameters": [
+					{
+						"name": "person",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"$ref": "#/components/schemas/Persons"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "default response",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"x-examples": {
+					"x": {
+						"id": "456"
+					},
+					"y": {
+						"id": "123"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Greeting": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"content": {
+						"type": "string"
+					}
+				}
+			},
+			"Persons": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"address": {
+						"type": "string"
+					},
+					"age": {
+						"type": "integer",
+						"format": "int64"
+					}
+				}
+			}
+		}
+	}
+}

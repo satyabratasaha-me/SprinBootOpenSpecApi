@@ -25,9 +25,12 @@ public class GreetingController {
 								"{" +
 									"\"name\":\"Alexa\"," +
 									"\"description\":\"This is a description\"," +
-									"\"parameters\": {\"id\":\"X123\"}}," +
+									"\"parameters\": {\"id\":\"X123\"}" +
+								"}," +
 								"{" +
-									"\"name\":\"Siri\"" +
+									"\"name\":\"Siri\"," +
+									"\"description\":\"This is a description\"," +
+									"\"parameters\": {\"id\":\"X456\"}" +
 								"}" +
 							"]", parseValue = true),
 			})
