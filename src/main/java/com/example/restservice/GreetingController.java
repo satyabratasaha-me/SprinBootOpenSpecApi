@@ -24,14 +24,8 @@ public class GreetingController {
 							"{\"name\":\"Alexa\"}," +
 							"{\"name\":\"Siri\"}" +
 							"]", parseValue = true),
-					//@ExtensionProperty(name = "name", value = "Josh")
 			})
 	})
-//	@GetMapping("/greeting")
-//	@Operation(extensions = {
-//			@Extension(properties = {
-//					@ExtensionProperty(name = "examples", value = "[\"{\"name\":\"Alexa\"}", parseValue = true)})
-//	})
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
